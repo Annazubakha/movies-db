@@ -1,7 +1,7 @@
 import { Button, CardActions, Container, Typography } from "@mui/material";
 import { useContext } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { AuthContext, anonymousUser } from "../AuthContext";
+import { AuthContext, anonymousUser } from "../../AuthContext";
 
 function Copyright() {
   return (

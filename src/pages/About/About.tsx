@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import CountdownText from "./CountdownText";
 import CountdownVideo from "./CountdownVideo";
-import { MapView } from "../../MapView/MapView";
+import { MapView } from "../../components/MapView/MapView";
 
 export function About() {
   return (

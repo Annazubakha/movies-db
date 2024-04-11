@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 
 import { purple } from "@mui/material/colors";
-import { Header } from "./Header/Header";
+import { Header } from "./components/Header/Header";
 import { AuthContext, AuthInfo, anonymousUser } from "./AuthContext";
 import { useState } from "react";
 

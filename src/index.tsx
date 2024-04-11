@@ -9,12 +9,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { About } from "./features/About/About";
-import Movies from "./features/Movies/Movies";
+import { About } from "./pages/About/About";
+import Movies from "./components/Movies/Movies";
 import { Provider } from "react-redux";
 import store from "./store";
-import { Home } from "./Home/Home";
-import { ErrorBoundary } from "./ErrorBoundary/ErrorBoundary";
+import { Home } from "./pages/Home/Home";
+import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
