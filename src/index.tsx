@@ -3,19 +3,20 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { About } from "./pages/About/About";
-import Movies from "./components/Movies/Movies";
 import { Provider } from "react-redux";
 import store from "./store";
 import { Home } from "./pages/Home/Home";
 import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
+import { LinearProgress } from "@mui/material";
 
+const Movies = lazy(() => import("./components/Movies/Movies"));
+const About = lazy(() => import("./pages/About/About"));
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -41,11 +42,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<LinearProgress sx={{ mt: 1 }} />}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/movies",
-        element: <Movies />,
+        element: (
+          <Suspense fallback={<LinearProgress sx={{ mt: 1 }} />}>
+            <Movies />
+          </Suspense>
+        ),
       },
     ],
   },

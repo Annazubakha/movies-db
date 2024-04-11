@@ -3,7 +3,7 @@ import CountdownText from "./CountdownText";
 import CountdownVideo from "./CountdownVideo";
 import { MapView } from "../../components/MapView/MapView";
 
-export function About() {
+function About() {
   return (
     <Container sx={{ py: 15 }} maxWidth="md">
       <CountdownText />
@@ -12,3 +12,5 @@ export function About() {
     </Container>
   );
 }
+
+export default About;

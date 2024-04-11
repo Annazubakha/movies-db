@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { memo } from "react";
 
 interface MovieCardProps {
   title: string;
@@ -19,15 +20,17 @@ interface MovieCardProps {
   id: number;
   image?: string;
   enableUserActions?: boolean;
+  onAddFavorite?(id: number): void;
 }
 
-export function MovieCard({
+function MovieCard({
   id,
   title,
   release_date,
   popularity,
   enableUserActions,
   image,
+  onAddFavorite,
 }: MovieCardProps) {
   return (
     <Card
@@ -67,6 +70,7 @@ export function MovieCard({
         {enableUserActions && (
           <Tooltip title="Add to favorites">
             <IconButton
+              onClick={() => onAddFavorite?.(id)}
               sx={{
                 color: "#d0a4d8",
                 "&:hover": {
@@ -82,3 +86,5 @@ export function MovieCard({
     </Card>
   );
 }
+
+export default memo(MovieCard);
