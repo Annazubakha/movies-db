@@ -9,6 +9,7 @@ import { AuthContext, AuthInfo, anonymousUser } from "./utils/AuthContext";
 const defaultTheme = createTheme({
   palette: {
     primary: purple,
+
     secondary: {
       main: "#d0a4d8",
     },
