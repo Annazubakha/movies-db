@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
-import CountdownText from "./CountdownText";
-import CountdownVideo from "./CountdownVideo";
+
+import CountdownText from "../../components/CountdownText/CountdownText";
+import CountdownVideo from "../../components/CountdownVideo/CountdownVideo";
 import { MapView } from "../../components/MapView/MapView";
 
 function About() {

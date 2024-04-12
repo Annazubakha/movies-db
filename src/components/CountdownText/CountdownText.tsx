@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
+import { Typography } from "@mui/material";
 
 const CountdownText = () => {
-  const [countdown, setCountDown] = useState(9);
+  const [countdown, setCountDown] = useState(60);
   const intervalRef = useRef<any>();
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -21,7 +21,7 @@ const CountdownText = () => {
   });
 
   return (
-    <Typography variant="h4" align="center">
+    <Typography variant="h3" align="center" color="primary" sx={{ mb: 2 }}>
       Coming soon: {countdown}
     </Typography>
   );

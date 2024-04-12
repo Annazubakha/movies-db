@@ -1,8 +1,9 @@
 import { Link as RouterLink } from "react-router-dom";
-import { AppBar, Toolbar, Link, Box } from "@mui/material";
 import { ReactNode } from "react";
-import { AuthSection } from "../AuthSection/AuthSection";
 import ConnectedTvIcon from "@mui/icons-material/ConnectedTv";
+import { AppBar, Toolbar, Link, Box } from "@mui/material";
+
+import { AuthSection } from "../AuthSection/AuthSection";
 
 function HeaderLink({ children, to }: { to: string; children: ReactNode }) {
   return (

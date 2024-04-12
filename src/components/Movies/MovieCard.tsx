@@ -1,5 +1,5 @@
 import { Link as RouterLink } from "react-router-dom";
-
+import { memo } from "react";
 import {
   Button,
   Card,
@@ -11,7 +11,6 @@ import {
   Typography,
 } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { memo } from "react";
 
 interface MovieCardProps {
   title: string;

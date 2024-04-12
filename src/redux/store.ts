@@ -1,10 +1,10 @@
 import { UnknownAction } from "redux";
-
 import { ThunkAction } from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
-import { tmdbApi } from "./services/tmdb";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+
+import { tmdbApi } from "../api/tmdb";
 
 const store = configureStore({
   reducer: {

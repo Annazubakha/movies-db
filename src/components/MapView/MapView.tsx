@@ -1,9 +1,10 @@
-import { Box, Container, Typography } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
-import { addPopupToMapWidget, createMapWidget } from "./mapWidget";
-import { Map } from "leaflet";
 import { createPortal } from "react-dom";
+import { Box, Container, Typography } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { Map } from "leaflet";
+
+import { addPopupToMapWidget, createMapWidget } from "./mapWidget";
 
 export const MapView = () => {
   const containerRef = useRef<HTMLDivElement>(null);

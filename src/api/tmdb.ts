@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { configuration } from "../configuration";
+import { configuration } from "../utils/configuration";
 
 interface Configuration {
   images: {

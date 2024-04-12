@@ -1,7 +1,8 @@
+import { useRef, useState } from "react";
+
 import { Card, CardActions, CardMedia, IconButton } from "@mui/material";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import { useRef, useState } from "react";
 
 const CountdownVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -15,8 +16,9 @@ const CountdownVideo = () => {
       videoRef.current?.pause();
     }
   };
+
   return (
-    <Card>
+    <Card sx={{ mb: 4 }}>
       <CardMedia>
         <video
           ref={videoRef}

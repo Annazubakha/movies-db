@@ -1,15 +1,9 @@
-import { Button, CardActions, Container, Typography } from "@mui/material";
 import { useContext } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { AuthContext, anonymousUser } from "../../AuthContext";
+import { Button, CardActions, Container, Typography } from "@mui/material";
 
-function Copyright() {
-  return (
-    <Typography variant="h6" align="center" color="secondary">
-      Copyright &#169; The Movies DB, {new Date().getFullYear()}
-    </Typography>
-  );
-}
+import { AuthContext, anonymousUser } from "../../utils/AuthContext";
+import { Copyright } from "../../components/Copyright/Copyright";
 
 export const Home = () => {
   const { user } = useContext(AuthContext);

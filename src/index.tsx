@@ -4,19 +4,20 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import React, { Suspense, lazy } from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import store from "./store";
-import { Home } from "./pages/Home/Home";
-import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { LinearProgress } from "@mui/material";
+
+import reportWebVitals from "./reportWebVitals";
+import store from "./redux/store";
+import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
+import { Home } from "./pages/Home/Home";
+import App from "./App";
 
 const Movies = lazy(() => import("./components/Movies/Movies"));
 const About = lazy(() => import("./pages/About/About"));
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

@@ -1,6 +1,6 @@
-import { Button, Typography } from "@mui/material";
 import { useContext } from "react";
-import { AuthContext, anonymousUser } from "../../AuthContext";
+import { Button, Typography } from "@mui/material";
+import { AuthContext, anonymousUser } from "../../utils/AuthContext";
 
 interface AuthSectionProp {
   onLogin(): void;

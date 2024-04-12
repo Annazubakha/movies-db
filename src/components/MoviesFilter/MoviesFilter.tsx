@@ -13,9 +13,9 @@ import {
   Skeleton,
 } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
-import { KeywordItem } from "../../services/tmdb";
+import { KeywordItem } from "../../api/tmdb";
 import { useMemo, useState } from "react";
-import { useGetKeywordsQuery, useGetGenresQuery } from "../../services/tmdb";
+import { useGetKeywordsQuery, useGetGenresQuery } from "../../api/tmdb";
 
 export interface Filters {
   keywords: KeywordItem[];

@@ -1,7 +1,7 @@
-import MovieCard from "./MovieCard";
 import { useCallback, useContext, useState } from "react";
 import { Container, Grid, LinearProgress, Typography } from "@mui/material";
-import { AuthContext, anonymousUser } from "../../AuthContext";
+
+import { AuthContext, anonymousUser } from "../../utils/AuthContext";
 import { useIntersectionObserver } from "../../hooks/useIntersectionObserver";
 import MoviesFilter from "../MoviesFilter/MoviesFilter";
 import {
@@ -9,7 +9,8 @@ import {
   MoviesQuery,
   useGetConfigurationQuery,
   useGetMoviesQuery,
-} from "../../services/tmdb";
+} from "../../api/tmdb";
+import MovieCard from "./MovieCard";
 
 const initialQuery: MoviesQuery = {
   page: 1,
